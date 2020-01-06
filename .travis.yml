@@ -17,7 +17,6 @@ before_install:
   - export CHROME_BIN=/usr/bin/google-chrome
   - export DISPLAY=:99.0
   - npm install -g @angular/cli@7.1.4
-  - ng --version
 install:
   - npm ci
 script:
