@@ -2,7 +2,7 @@ os:
   - linux
 language: node_js
 node_js:
-  - '8'
+  - '8.3'
 addons:
   apt:
     sources:
@@ -20,8 +20,7 @@ before_install:
 install:
   - npm ci
 script:
-  - pushd /frontend
+  - cd /frontend
   - ng test -no-progress --browsers=ChromeHeadlessNoSandbox 
   - ng e2e
   - ng build
-  - popd
