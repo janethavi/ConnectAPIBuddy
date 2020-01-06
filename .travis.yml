@@ -1,0 +1,25 @@
+os:
+  - linux
+language: node_js
+node_js:
+  - '8.3.3'
+addons:
+  apt:
+    sources:
+    - google-chrome
+    packages:
+    - google-chrome-stable
+cache:
+  directories:
+  - node_modules
+branches:
+  only:
+  - master
+before_install:
+  - npm install -g @angular/cli@7.0.6
+install:
+  - npm ci
+script:
+  - ng test -no-progress --browsers=ChromeHeadlessNoSandbox 
+  - ng e2e
+  - ng build
