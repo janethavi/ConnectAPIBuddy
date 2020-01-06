@@ -9,15 +9,12 @@ addons:
     - google-chrome
     packages:
     - google-chrome-stable
-cache:
-  directories:
-  - /frontend/node_modules
 branches:
   only:
   - master
 before_install:
-  - npm install -g @angular/cli@7.0.6
   - cd /frontend
+  - npm install -g @angular/cli@7.0.6
 script:
   - ng test -no-progress --browsers=ChromeHeadlessNoSandbox 
   - ng e2e
