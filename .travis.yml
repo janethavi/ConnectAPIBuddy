@@ -18,4 +18,4 @@ before_install:
 script:
   - ng build
   - ng test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
-  - Run ng e2e -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
+  - ng e2e -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
