@@ -17,8 +17,8 @@ branches:
   - master
 before_install:
   - npm install -g @angular/cli@7.0.6
-script:
   - cd /frontend
+script:
   - ng test -no-progress --browsers=ChromeHeadlessNoSandbox 
   - ng e2e
   - ng build
