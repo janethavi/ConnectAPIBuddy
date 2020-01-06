@@ -20,6 +20,8 @@ before_install:
 install:
   - npm ci
 script:
+  - pushd /frontend
   - ng test -no-progress --browsers=ChromeHeadlessNoSandbox 
   - ng e2e
   - ng build
+  - popd
