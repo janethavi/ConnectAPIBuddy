@@ -17,5 +17,5 @@ before_install:
   - npm install -g @angular/cli@8.3.3
 script:
   - ng build
-  - ng test --no-progress --browsers=ChromeHeadlessNoSandbox
-  - ng e2e --no-progress --browsers=ChromeHeadlessNoSandbox
+  - ng test
+  - ng e2e
