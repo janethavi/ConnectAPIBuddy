@@ -14,9 +14,6 @@ before_install:
   - cd frontend
   - export CHROME_BIN=/usr/bin/google-chrome
   - export DISPLAY=:99.0
-  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=4200 http://localhost &
   - npm install -g @angular/cli@8.3.3
 script:
   - ng build
-  - ng test
-  - ng e2e
